@@ -5,4 +5,9 @@
  *
  */
 
-module.exports = {a: 1}
+// 后面花括号是函数参数的默认值，前面花括号内的等号是解构赋值的默认值，是两码事
+module.exports = ({moduleName = ''} = {}) => {
+	return new Promise(resolve => {
+		resolve('a')
+	})
+}
