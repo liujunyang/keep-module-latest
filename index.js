@@ -47,7 +47,7 @@ module.exports = ({
 			}
 
 			try {
-				cp.execSync(`npm install --registry ${registry} ${moduleName}@latest`, {cwd})
+				cp.execSync(`npm install --registry ${registry} ${moduleName}@latest`, {cwd, stdio: 'inherit'})
 			} catch (err) {
 				throw new Error(err)
 			}
